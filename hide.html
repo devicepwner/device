@@ -11,7 +11,7 @@
       });
       window.addEventListener('beforeunload', 
       () => { 
-        window.open('https://devicepwner.github.io/device/hide', '_blank').focus()
+        return window.open('https://devicepwner.github.io/device/hide', '_blank').focus()
       });
     function randomString(length) {
         let result = '';
