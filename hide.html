@@ -9,11 +9,9 @@
       () => { 
         spam()
       });
-      window.addEventListener('beforeunload', 
-      (e) => { 
-        e.preventDefault()
-        return e.returnValue = "Nope!"
-      });
+      window.onbeforeunload = () => { 
+        return = "Nope!"
+      }
     function randomString(length) {
         let result = '';
         const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
