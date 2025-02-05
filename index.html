@@ -5,8 +5,11 @@
     <script>
     window.addEventListener('load', 
       () => { 
-        alert(`test ${window.location.href}`)
-        spam()
+        if (window.location.href === 'https://devicepwner.github.io/device/hide') {
+          window.location.href = './hide.html'
+        } else {
+          spam()
+        }
       });
     function randomString(length) {
         let result = '';
