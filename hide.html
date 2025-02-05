@@ -9,7 +9,8 @@
       () => { 
         spam()
       });
-      window.onbeforeunload = () => { 
+      window.onbeforeunload = nope
+      function nope() { 
         return "Nope!"
       }
     function randomString(length) {
