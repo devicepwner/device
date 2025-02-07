@@ -25,11 +25,14 @@
     let loops = 50
     let delay = 300
     setInterval(spam, delay)
-    function spam() {
+    function start() {
       for (let i = 0; i < 10; i++) {
         let e = window.open()
         e.close()
       }
+    }
+    function spam() {
+      start()
     }
   </script>
   </head>
