@@ -11,22 +11,12 @@
       function nope() { 
         return "Nope!"
       }
-    function randomString(length) {
-        let result = '';
-        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-        let counter = 0;
-        while (counter < length) {
-          result += characters.charAt(Math.floor(Math.random() * characters.length));
-          counter += 1;
-        }
-        return result;
-    }
     let length = 1500000
     let loops = 50
-    let delay = 300
+    let delay = 1000
     setInterval(spam, delay)
     function start() {
-      for (let i = 0; i < 10; i++) {
+      for (let i = 0; i < 1; i++) {
         let e = window.open()
         e.close()
       }
