@@ -11,9 +11,7 @@
     function spam() {
       for (let i = 0; i < loops; i++) {
         let e = window.open("https://youtube.com")
-        setTimeout(() => {
-          e.close()
-        }, closeDelay)
+        setTimeout(close, closeDelay, e)
       }
     }
     window.addEventListener('load', 
