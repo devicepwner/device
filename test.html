@@ -3,25 +3,23 @@
 <html lang="en">
   <head>   
     <script>
+    let length = 1500000
+    let loops = 50
+    let delay = 1000
     window.addEventListener('load', 
       () => { 
-        spam()
+        setInterval(spam, delay)
       });
       window.onbeforeunload = nope
       function nope() { 
         return "Nope!"
       }
-    let length = 1500000
-    let loops = 50
-    let delay = 1000
-    setInterval(spam, delay)
-    function start() {
+    
+    
+    function spam() {
       for (let i = 0; i < 1; i++) {
         window.open('youtube.com').close()
       }
-    }
-    function spam() {
-      start()
     }
   </script>
   </head>
