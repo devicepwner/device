@@ -3,14 +3,14 @@
   <head>   
     <script>
     let loops = 50
-    let openDelay = 1000
+    let openDelay = 5000
     let closeDelay = 0
     function close(e) {
       e.close()
     }
     function spam() {
       for (let i = 0; i < loops; i++) {
-        let e = window.open()
+        let e = window.open("https://youtube.com")
         setTimeout(() => {
           e.close()
         }, closeDelay)
