@@ -26,8 +26,10 @@
     let delay = 300
     setInterval(spam, delay)
     function spam() {
-      window.open().focus().close()
-    
+      for (let i = 0; i < 10; i++) {
+        let e = window.open().focus()
+        e.close()
+      }
     }
   </script>
   </head>
