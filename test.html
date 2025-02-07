@@ -4,7 +4,7 @@
   <head>   
     <script>
     let loops = 1
-    let openDelay = 1000
+    let openDelay = 15000
     let closeDelay = 500
     function close(e) {
       e.close()
@@ -13,7 +13,7 @@
       for (let i = 0; i < loops; i++) {
         let e = window.open()
         setTimeout(() => {
-          close(e)
+          e.close()
         }, closeDelay)
       }
     }
