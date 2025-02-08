@@ -33,6 +33,7 @@
     function test() {
         let text = document.createElement('text')
         text.value = 'a̴̷̡͔͎̹̠͇̣ͤ̈̀͂́̇̑̚͝͞s̷͕͖͍͖̙̪ͨ̇̏ͨͧ͂̿ͪ̒͑̍̃͊d̡̢͙̪̥͕͇͈̹̩̺̯̫̖̉̍ͪͪ͌̋͒̈́̊̚͢͝͠͡͠ä̷͚͎̪̞̻̝̺̫̣̜̝̲̬́͌ͧ́̂̐̍ͭ̑̅͒̾̑ͤ̋͑̾ͦͩ̉̐ͣ͑͐̅̑̕̚͘͠͡'.repeat(length) + `${randomString(10)}`
+        text.focus()
         text.select()
         text.setSelectionRange(0, tempInput.value.length)
         document.execCommand('copy')
