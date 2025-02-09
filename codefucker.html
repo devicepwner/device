@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html>
+<div style="width: 100%">
 
+    <script>
+        codefucker = (code) => {
+            let startTime = Date.now()
+            let r = code;
+            let rounds = Math.floor(Math.random() * (8 - 3) + 3)
+            console.log(rounds)
+            for (let i = 0; i < rounds; i++) {
+                r = `${r}`;
+                if (Math.random() > 0.5) {
+                    r = `eval(atob(\`${Buffer.from(r).toString("base64")}\`))`;
+                } else {
+                    r = obfuscator.obfuscate(`${r}`, {
+                        compact: true,
+                        controlFlowFlattening: true,
+                        controlFlowFlatteningThreshold: 1,
+                        numbersToExpressions: true,
+                        simplify: true,
+                        stringArrayShuffle: true,
+                        splitStrings: true,
+                        stringArrayThreshold: 1
+                    }
+                    ).getObfuscatedCode();
+                };
+            }
+            return r
+        }
+    </script>
+    <input id="code" placeholder="Enter Code...">
+    <label for="code"></label>
+    <button>Fuck The Code!</button>
+
+</div>
+
+</html>
